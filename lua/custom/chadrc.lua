@@ -9,8 +9,11 @@ M.ui = {
         grey = "#c0b38a",
         grey_fg = "#b6a980",
         grey_fg2 = "#ac9f76",
-        line = "#ded1a8",
         folder_bg = "#b8bb26",
+      },
+      base_16 = {
+        base02 = "#746d69",
+        base03 = "#d8cba2",
       },
     },
   },
