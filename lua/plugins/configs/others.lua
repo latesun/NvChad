@@ -51,13 +51,14 @@ end
 
 M.gitsigns = {
   signs = {
-    add = { text = "│" },
-    change = { text = "│" },
-    delete = { text = "󰍵" },
+    add = { text = "A" },
+    change = { text = "M" },
+    delete = { text = "D" },
     topdelete = { text = "‾" },
     changedelete = { text = "~" },
     untracked = { text = "│" },
   },
+  current_line_blame = true,
   on_attach = function(bufnr)
     utils.load_mappings("gitsigns", { buffer = bufnr })
   end,

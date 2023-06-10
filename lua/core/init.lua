@@ -29,7 +29,7 @@ opt.mouse = "a"
 
 -- Numbers
 opt.number = true
-opt.numberwidth = 2
+opt.relativenumber = true
 opt.ruler = false
 
 -- disable nvim intro
@@ -49,7 +49,7 @@ opt.updatetime = 250
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
 
-g.mapleader = " "
+g.mapleader = ";"
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
