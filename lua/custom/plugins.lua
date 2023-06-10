@@ -64,5 +64,13 @@ local plugins = {
       vim.cmd [[slient! GoInstallDeps]]
     end,
   },
+
+  {
+    "jcdickinson/codeium.nvim",
+    config = function()
+      require("codeium").setup {}
+    end,
+    lazy = false,
+  },
 }
 return plugins
