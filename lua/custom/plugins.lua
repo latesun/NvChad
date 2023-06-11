@@ -71,5 +71,13 @@ local plugins = {
     end,
     lazy = false,
   },
+
+  {
+    "ethanholz/nvim-lastplace",
+    config = function()
+      require("nvim-lastplace").setup {}
+    end,
+    lazy = false,
+  },
 }
 return plugins
