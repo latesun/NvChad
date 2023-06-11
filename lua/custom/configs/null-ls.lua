@@ -6,7 +6,7 @@ local sources = {
   formatting.black,
   formatting.gofumpt,
   formatting.stylua,
-  formatting.prettier,
+  formatting.prettierd,
   formatting.buf,
 }
 
