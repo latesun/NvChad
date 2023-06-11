@@ -18,6 +18,7 @@ local plugins = {
         "golangci_lint_ls",
         "gofumpt",
         "bufls",
+        "prettierd",
         "jsonls",
       },
     },
