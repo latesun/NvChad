@@ -79,5 +79,10 @@ local plugins = {
     end,
     lazy = false,
   },
+
+  {
+    "weilbith/nvim-code-action-menu",
+    cmd = "CodeActionMenu",
+  },
 }
 return plugins

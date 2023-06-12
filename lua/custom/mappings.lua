@@ -81,17 +81,24 @@ M.lspconfig = {
       end,
       "LSP references",
     },
+
     ["go"] = {
       function()
         require("telescope.builtin").diagnostics()
       end,
       "LSP references",
     },
+
     ["<leader>rn"] = {
       function()
         require("nvchad_ui.renamer").open()
       end,
       "LSP rename",
+    },
+
+    ["<leader>ca"] = {
+      "<cmd> CodeActionMenu <CR>",
+      "LSP code action",
     },
   },
 }
