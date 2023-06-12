@@ -2,6 +2,11 @@ local M = {}
 
 M.disabled = {
   n = {
+    ["<leader>wa"] = "",
+    ["<leader>wr"] = "",
+    ["<leader>wl"] = "",
+    ["<leader>wK"] = "",
+    ["<leader>wk"] = "",
     ["<leader>rn"] = "",
   },
 }
@@ -9,11 +14,13 @@ M.disabled = {
 M.keybinding = {
   n = {
     ["<leader>w"] = { "<cmd> w <CR>", "Save buffer" },
+    ["<leader>wa"] = { "<cmd> wa <CR>", "Save all buffers" },
   },
 
   i = {
     ["jk"] = { "<ESC>", "Exit" },
     ["<leader>w"] = { "<cmd> w <CR><ESC>", "Save buffer" },
+    ["<leader>wa"] = { "<cmd> wa <CR><ESC>", "Save all buffers" },
   },
 }
 
