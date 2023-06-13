@@ -6,6 +6,7 @@ local servers = {
   pyright = {},
   bufls = {},
   jsonls = {},
+  clangd = {},
 }
 
 local lspconfig = require "plugins.configs.lspconfig"

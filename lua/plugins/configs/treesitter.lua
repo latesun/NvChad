@@ -9,6 +9,8 @@ local options = {
     "json",
     "rust",
     "toml",
+    "c",
+    "cpp",
   },
 
   highlight = {
