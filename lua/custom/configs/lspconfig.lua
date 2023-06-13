@@ -1,6 +1,7 @@
 local servers = {
   lua_ls = require "custom.configs.lsp.lua_ls",
   gopls = require "custom.configs.lsp.gopls",
+  rust_analyzer = require "custom.configs.lsp.rust_analyzer",
   golangci_lint_ls = {},
   pyright = {},
   bufls = {},

@@ -1,5 +1,15 @@
 local options = {
-  ensure_installed = { "lua", "go", "python", "gomod", "yaml", "json" },
+  ensure_installed = {
+    "lua",
+    "go",
+    "python",
+    "gomod",
+    "gosum",
+    "yaml",
+    "json",
+    "rust",
+    "toml",
+  },
 
   highlight = {
     enable = true,
