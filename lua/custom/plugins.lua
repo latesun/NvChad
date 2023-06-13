@@ -20,6 +20,7 @@ local plugins = {
         "bufls",
         "prettierd",
         "jsonls",
+        "rust_analyzer",
       },
     },
   },
@@ -83,6 +84,22 @@ local plugins = {
   {
     "weilbith/nvim-code-action-menu",
     cmd = "CodeActionMenu",
+  },
+
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
+
+  {
+    "saecki/crates.nvim",
+    event = { "BufRead Cargo.toml" },
+    config = function()
+      require "custom.configs.crates"
+    end,
   },
 }
 return plugins
