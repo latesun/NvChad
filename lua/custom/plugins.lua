@@ -101,5 +101,14 @@ local plugins = {
       require "custom.configs.crates"
     end,
   },
+
+  {
+    "phaazon/hop.nvim",
+    branch = "v2",
+    config = function()
+      require("hop").setup {}
+    end,
+    lazy = false,
+  },
 }
 return plugins

@@ -15,6 +15,8 @@ M.keybinding = {
   n = {
     ["<leader>w"] = { "<cmd> w <CR>", "Save buffer" },
     ["<leader>wa"] = { "<cmd> wa <CR>", "Save all buffers" },
+    ["f"] = { "<cmd> HopChar1 <CR>", "Easy motion with a char" },
+    ["ss"] = { "<cmd> HopChar2 <CR>", "Easy motion with two chars" },
   },
 
   i = {
