@@ -116,4 +116,26 @@ M.lspconfig = {
   },
 }
 
+M.nvterm = {
+  plugin = true,
+
+  t = {
+    ["<leader>tm"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
+  },
+
+  n = {
+    ["<leader>tm"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
+  },
+}
+
 return M
