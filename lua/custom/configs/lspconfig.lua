@@ -9,11 +9,24 @@ local servers = {
   clangd = {},
 }
 
-local lspconfig = require "plugins.configs.lspconfig"
+local on_attach = require("plugins.configs.lspconfig").on_attach
+local capabilities = require("plugins.configs.lspconfig").capabilities
+
+local lspconfig = require "lspconfig"
+
 for name, settings in pairs(servers) do
-  require("lspconfig")[name].setup {
-    on_attach = lspconfig.on_attach,
-    capabilities = lspconfig.capabilities,
-    settings = settings,
-  }
+  if name == "clangd" then
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.offsetEncoding = { "utf-16" }
+    lspconfig["clangd"].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+  else
+    lspconfig[name].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      settings = settings,
+    }
+  end
 end
