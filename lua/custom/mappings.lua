@@ -15,6 +15,7 @@ M.keybinding = {
   n = {
     ["<leader>w"] = { "<cmd> w <CR>", "Save buffer" },
     ["<leader>wa"] = { "<cmd> wa <CR>", "Save all buffers" },
+    ["<leader>td"] = { "<cmd> TodoTelescope <CR>", "Display todolist" },
     ["f"] = { "<cmd> HopChar1 <CR>", "Easy motion with a char" },
     ["ss"] = { "<cmd> HopChar2 <CR>", "Easy motion with two chars" },
     ["*"] = { "*<cmd> lua require('hlslens').start() <CR>", "" },
