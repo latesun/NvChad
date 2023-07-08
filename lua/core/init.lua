@@ -13,6 +13,16 @@ opt.laststatus = 3 -- global statusline
 opt.showmode = false
 
 opt.clipboard = "unnamedplus"
+local in_wsl = os.getenv "WSL_DISTRO_NAME" ~= nil
+if in_wsl then
+  g.clipboard = {
+    name = "wsl clipboard",
+    copy = { ["+"] = { "clip.exe" }, ["*"] = { "clip.exe" } },
+    paste = { ["+"] = { "nvim_paste" }, ["*"] = { "nvim_paste" } },
+    cache_enabled = true,
+  }
+end
+
 opt.cursorline = true
 
 -- Indenting
