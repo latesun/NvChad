@@ -11,8 +11,13 @@ M.disabled = {
   },
 }
 
-M.keybinding = {
+M.general = {
   n = {
+    ["<C-h>"] = { "<cmd> TmuxNavigateLeft <CR>", "Window left" },
+    ["<C-l>"] = { "<cmd> TmuxNavigateRight <CR>", "Window right" },
+    ["<C-j>"] = { "<cmd> TmuxNavigateDown <CR>", "Window down" },
+    ["<C-k>"] = { "<cmd> TmuxNavigateUp <CR>", "Window up" },
+
     ["<leader>w"] = { "<cmd> w <CR>", "Save buffer" },
     ["<leader>wa"] = { "<cmd> wa <CR>", "Save all buffers" },
     ["<leader>td"] = { "<cmd> TodoTelescope <CR>", "Display todolist" },
