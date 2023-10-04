@@ -42,6 +42,12 @@ M.lazy = {
   },
 }
 
+M.mason = {
+  n = {
+    ["<leader>m"] = { "<cmd> Mason <CR>", "Toggle mason" },
+  },
+}
+
 M.dashboard = {
   n = {
     ["<leader>a"] = { "<cmd> Dashboard <CR>", "Toggle launch page" },

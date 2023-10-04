@@ -12,32 +12,38 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "pyright",
         "black",
-        "gopls",
-        "golangci_lint_ls",
-        "gofumpt",
         "bufls",
-        "prettierd",
+        "clang_format",
+        "gofumpt",
+        "goimports",
+        "golangci_lint_ls",
+        "gopls",
+        "isort",
         "jsonls",
+        "prettierd",
+        "pyright",
         "rust_analyzer",
+        "rustfmt",
+        "stylua",
+        "yamlls",
       },
     },
   },
 
   {
     "neovim/nvim-lspconfig",
-
-    dependencies = {
-      "jose-elias-alvarez/null-ls.nvim",
-      opts = function()
-        require "custom.configs.null-ls"
-      end,
-    },
-
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
+    end,
+  },
+
+  {
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require "custom.configs.conform"
     end,
   },
 
@@ -87,18 +93,10 @@ local plugins = {
   },
 
   {
-    "rust-lang/rust.vim",
-    ft = "rust",
-    init = function()
-      vim.g.rustfmt_autosave = 1
-    end,
-  },
-
-  {
     "saecki/crates.nvim",
     event = { "BufRead Cargo.toml" },
     config = function()
-      require "custom.configs.crates"
+      require("crates").setup()
     end,
   },
 
@@ -126,6 +124,7 @@ local plugins = {
     end,
     lazy = false,
   },
+
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
