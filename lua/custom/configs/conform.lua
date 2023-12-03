@@ -8,7 +8,7 @@ require("conform").setup {
     lua = { "stylua" },
     markdown = { "prettierd" },
     proto = { "buf" },
-    python = { "isort", "black" },
+    python = { "isort", "ruff_format" },
     rust = { "rustfmt" },
     yaml = { "prettierd" },
   },

@@ -6,6 +6,7 @@ local servers = {
   lua_ls = require "custom.configs.lsp.lua_ls",
   jsonls = {},
   pyright = {},
+  ruff_lsp = {},
   rust_analyzer = require "custom.configs.lsp.rust_analyzer",
   yamlls = {},
 }
