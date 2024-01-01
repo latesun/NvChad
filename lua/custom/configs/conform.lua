@@ -10,6 +10,7 @@ require("conform").setup {
     proto = { "buf" },
     python = { "isort", "ruff_format" },
     rust = { "rustfmt" },
+    toml = { "taplo" },
     yaml = { "prettierd" },
   },
 

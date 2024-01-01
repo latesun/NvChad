@@ -1,6 +1,6 @@
 local plugins = {
   {
-    "glepnir/dashboard-nvim",
+    "nvimdev/dashboard-nvim",
     event = "VimEnter",
     config = function()
       require "custom.configs.dashboard"
@@ -23,9 +23,11 @@ local plugins = {
         "jsonls",
         "prettierd",
         "pyright",
+        "ruff_lsp",
         "rust_analyzer",
         "rustfmt",
         "stylua",
+        "taplo",
         "yamlls",
       },
     },

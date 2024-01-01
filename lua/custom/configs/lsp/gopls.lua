@@ -4,7 +4,6 @@ return {
     analyses = {
       assign = true,
       errorsas = true,
-      fieldalignment = true,
       ifaceassert = true,
       nilness = true,
       unusedparams = true,
